@@ -36,7 +36,7 @@ const getData=async ()=>{
             order:"sys.createdAt"
         })
         console.log(response.items)
-        let rooms = formatData(response.items)
+        let rooms = formatData(items||response.items)
     let featuredRooms=rooms.filter((room)=>
     room.featured===true)
     let maxPrice= Math.max(...rooms.map(item =>{
